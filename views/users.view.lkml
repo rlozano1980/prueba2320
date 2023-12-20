@@ -1,10 +1,12 @@
 view: users {
   sql_table_name: demo_db.users ;;
+
   drill_fields: [id]
 
   dimension: id {
     primary_key: yes
     type: number
+    #label: "Users identification test long name123456789xxx"
     sql: ${TABLE}.id ;;
   }
   dimension: age {
@@ -57,15 +59,15 @@ view: users {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	first_name,
-	last_name,
-	events.count,
-	orders.count,
-	saralooker.count,
-	sindhu.count,
-	user_data.count
-	]
+  id,
+  first_name,
+  last_name,
+  events.count,
+  orders.count,
+  saralooker.count,
+  sindhu.count,
+  user_data.count
+  ]
   }
 
 }
